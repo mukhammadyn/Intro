@@ -185,10 +185,15 @@ body {
 }
 
 .button-mini {
+  text-decoration: none;
   font-weight: bold;
-  color: #ff7979
+  color: #ff7979;
+  transition: opacity 0.3s ease;
 }
 
+.button-mini:hover {
+  opacity: 0.7;
+}
 
 
 
