@@ -132,6 +132,7 @@ body {
   padding: 15px 32px;
   transition: border 0.3s ease,
   opacity 0.3s ease;
+  text-transform: capitalize;
 }
 
 .input:hover {
