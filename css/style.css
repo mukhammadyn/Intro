@@ -18,8 +18,8 @@ body {
   max-width: 1150px;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .visuallyhidden {
@@ -60,7 +60,7 @@ body {
 .site-login__text {
   margin: 0;
   padding: 0;
-  margin-top: 11px;
+  margin-top: 20px;
   width: 525px;
   font-weight: 500;
   font-size: 16px;
@@ -123,6 +123,8 @@ body {
 }
 
 .input {
+  display: block;
+  width: 460px;
   outline: none;
   outline-style: none;
   background: #FFFFFF;
@@ -133,6 +135,32 @@ body {
   transition: border 0.3s ease,
   opacity 0.3s ease;
   text-transform: capitalize;
+}
+
+.input:not(:placeholder-shown):not(:focus):invalid {
+  border: 1px solid #FF7979;
+  background-image: url(/img/icon/undo.png);
+  background-repeat: no-repeat;
+  background-position: right calc(5px) center;
+}
+
+.input:not(:placeholder-shown):not(:focus):valid {
+  border: 1px solid #79ff9b;
+  background-color: #79ff9b;
+}
+
+.input-error-text {
+  display: none;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  text-align: right;
+  color: #FF7979;
+}
+
+.input:not(:placeholder-shown):not(:focus):invalid ~ .input-error-text {
+  display: block;
 }
 
 .input:hover {
@@ -166,6 +194,7 @@ body {
   text-transform: uppercase;
   white-space: nowrap;
   transition: opacity 0.3s ease;
+  cursor: pointer;
 }
 
 .input-button:hover {

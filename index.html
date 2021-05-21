@@ -18,7 +18,7 @@
 
       <div class="site-login__container container">
 
-        <section classinput="site-login__title">
+        <section class="site-login__title">
   
           <h1 class="site-login__head">Learn to code by watching others</h1>
           <p class="site-login__text">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
@@ -31,12 +31,13 @@
   
           <div class="user-intro">
   
-            <form action="https://echo.htmlacademy.ru" method="POST">
+            <form class="site-form" action="https://echo.htmlacademy.ru" method="POST">
             
               <div class="input-group">
   
                 <label class="visuallyhidden" for="name">name</label>
-                <input class="input" type="text" placeholder="Name" name="name" required>
+                <input class="input" type="text" placeholder="Name" name="name" minlength="2" required>
+                <span class="input-error-text">First Name cannot be empty</span>
   
               </div>
   
@@ -44,6 +45,7 @@
   
                 <label class="visuallyhidden" for="Last_name">Last name</label>
                 <input class="input" type="text" placeholder="Last name" name="Last_name" required>
+                <span class="input-error-text">Last Name cannot be empty</span>
   
               </div>
   
@@ -51,6 +53,7 @@
   
                 <label class="visuallyhidden" for="email">Email adress</label>
                 <input class="input" type="email" placeholder="Email adress" name="email" required>
+                <span class="input-error-text">Looks like this is not an email</span>
   
               </div>
   
@@ -58,6 +61,7 @@
   
                 <label class="visuallyhidden" for="password">Password</label>
                 <input class="input" type="password" placeholder="Password" name="password" required>
+                <span class="input-error-text">Password cannot be empty</span>
   
               </div>
    
